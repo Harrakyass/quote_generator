@@ -30,7 +30,7 @@ export default function QuoteGenerator () {
         const images = [image1, image2, image3, image4, image5, image7, image8, image9, image10];
 
     const [currentQuote, setCurrentQuote] = useState(initialQuote);
-    const [backgroundImage, setbackgroundImage] = useState(image1);
+    const [backgroundImage, setBackgroundImage] = useState(image1);
 
 
     const generateQuote = () => {
@@ -38,7 +38,9 @@ export default function QuoteGenerator () {
     };
 
     const generateImage = () => {
-        setbackgroundImage(images[Math.floor(Math.random() * images.length)]);
+        const randomIndex = Math.floor(Math.random() * images.length);
+        setBackgroundImage(images[randomIndex]);
+        console.log(randomIndex);
     }
 
     const handleGenerate = () => {
