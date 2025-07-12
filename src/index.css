@@ -24,20 +24,25 @@ body {
   text-align: center;
 }
 
+
+
 .generated-image {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: 340px;
+  object-fit: cover;
   border-radius: 16px;
-  display: cover;
   margin: 0 auto 20px auto;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3); /* Optional for some depth */
 }
+
 
 /* Button styling */
 
 /* From Uiverse.io by Navarog21 */ 
 .generate-button {
+  margin-top: 5px;
+  padding: 5px;
   width: 10em;
   position: relative;
   height: 3.5em;

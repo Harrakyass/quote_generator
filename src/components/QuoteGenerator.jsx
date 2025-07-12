@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {image1, image2, image3, image4, image5, image7, image8, image9, image10} from '../assets/images.jsx';
 
 export default function QuoteGenerator () {
+    const initialQuote = "there are two miseries a man faces in life, One is to not understand your heart's desire, and the second is to understand it.  - Bernard Show";
     const quotes = [
         "We march to victory, or march to defeat, BUT we march forward.  -  Stanis Baratheon",
         "there are two miseries a man faces in life, One is to not understand your heart's desire, and the second is to understand it.  - Bernard Show",
@@ -28,7 +29,7 @@ export default function QuoteGenerator () {
         ];
         const images = [image1, image2, image3, image4, image5, image7, image8, image9, image10];
 
-    const [currentQuote, setCurrentQuote] = useState("");
+    const [currentQuote, setCurrentQuote] = useState(initialQuote);
     const [backgroundImage, setbackgroundImage] = useState(image1);
 
 
@@ -47,7 +48,7 @@ export default function QuoteGenerator () {
 
 
     return (
-        <div>
+        <div className="quote-card">
             <h2 className="header">Random Quote Generator</h2>
             <img className="generated-image" src={backgroundImage} alt="random generated image"/>
             <p className="quote">{currentQuote != "" && currentQuote}</p>
